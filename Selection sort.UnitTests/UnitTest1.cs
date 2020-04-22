@@ -30,5 +30,26 @@ namespace Selection_sort.UnitTests
             Assert.AreEqual(new[] { 1, 2, 3 }, Sort(new[] { 3, 1, 2 }));
             Assert.AreEqual(new[] { 3, 2, 1 }, Sort(new[] { 3, 1, 2 }, false));
         }
+        [Test]
+        public void StatementCoverage()
+        {
+            Assert.AreEqual(new [] { 0, 1 }, Sort(new [] { 1, 0 }));
+        }
+        [Test]
+        public void DecisionCoverage()
+        {
+            Assert.AreEqual(new [] { 1, 2, 3 }, Sort(new [] { 3, 1, 2 }));
+        }
+        [Test]
+        public void ConditionCoverage()
+        {
+            Assert.AreEqual(new [] { 1, 2, 3 }, Sort(new [] { 3, 1, 2 }));
+            Assert.AreEqual(new [] { 3, 2, 1 }, Sort(new [] { 3, 1, 2 }, false));
+        }
+        [Test]
+        public void CircuitCoverage()
+        {
+            Assert.AreEqual(new [] { 1, 2, 3 }, Sort(new [] { 3, 1, 2 }));
+        }
     }
 }
