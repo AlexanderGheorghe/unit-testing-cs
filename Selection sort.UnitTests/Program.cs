@@ -4,11 +4,6 @@ namespace Selection_sort
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-
         static void Sort(int[] v, bool asc)
         {
             int l = v.Length;

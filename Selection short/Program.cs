@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Selection_sort
 {
@@ -6,13 +10,19 @@ namespace Selection_sort
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] v = { 13, 1, 626, 21, 555, 23 };
+            Sort(v, true);
+            foreach (var n in v)
+                Console.WriteLine(n.ToString());
+            Sort(v, false);
+            foreach (var n in v)
+                Console.WriteLine(n.ToString());
         }
 
         static void Sort(int[] v, bool asc)
         {
             int l = v.Length;
-            for (int i = 0; i < l - 1; ++i)
+            for (int i = 0; i < l-1; ++i)
             {
                 int indexToSwap = i;
                 for (int j = i + 1; j < l; ++j)
