@@ -6,7 +6,7 @@ namespace Selection_sort.UnitTests
     {
         private int[] Sort(int[] v, bool asc = true)
         {
-            Program.Sort(v, asc);
+            Selection.Sort(v, asc);
             return v;
         }
         [Test]

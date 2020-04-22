@@ -2,8 +2,11 @@
 
 namespace Selection_sort
 {
-    class Program
+    public class Selection
     {
+        public static void Main(string[] args){
+
+        }
         public static void Sort(int[] v, bool asc = true)
         {
             int l = v.Length;
