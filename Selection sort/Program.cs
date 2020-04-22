@@ -10,10 +10,16 @@ namespace Selection_sort
     {
         static void Main(string[] args)
         {
-
+            int[] v = { 13, 1, 626, 21, 555, 23 };
+            Sort(v, true);
+            foreach (var n in v)
+                Console.WriteLine(n.ToString());
+            Sort(v, false);
+            foreach (var n in v)
+                Console.WriteLine(n.ToString());
         }
 
-        private void Sort(int[] v, bool asc)
+        static void Sort(int[] v, bool asc)
         {
             int l = v.Length;
             for (int i = 0; i < l-1; ++i)
