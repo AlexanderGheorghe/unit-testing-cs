@@ -4,7 +4,7 @@ namespace Selection_sort
 {
     class Program
     {
-        static void Sort(int[] v, bool asc)
+        public static void Sort(int[] v, bool asc = true)
         {
             int l = v.Length;
             for (int i = 0; i < l - 1; ++i)
