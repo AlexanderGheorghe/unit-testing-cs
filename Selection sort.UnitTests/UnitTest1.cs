@@ -12,7 +12,7 @@ namespace Selection_sort.UnitTests
         [Test]
         public void EquivalencePartitioning()
         {
-            Assert.AreEqual(5,5);
+            Assert.AreEqual(Program.Sort());
         }
     }
 }
