@@ -5,30 +5,23 @@ namespace Selection_sort.UnitTests
 {
     public class SortTests
     {
+        private int[] Sort(int[] v, bool asc = true)
+        {
+            Program.Sort(v, asc);
+            return v;
+        }
+
         [Test]
         public void EquivalencePartitioning()
         {
-            int[] EmptyArray = {};
-            int[] ZeroArray = {0};
-            int[] MultipleArray = {2, 1, 3};
+            Assert.AreEqual(new int[] { }, Sort(new int[] { }));
+            Assert.AreEqual(new int[] { }, Sort(new int[] { }, false));
 
-            Program.Sort(EmptyArray);
-            Assert.AreEqual(new int[] { }, EmptyArray);
+            Assert.AreEqual(new [] { 0 }, Sort(new [] { 0 }));
+            Assert.AreEqual(new [] { 0 }, Sort(new [] { 0 }, false));
 
-            Program.Sort(EmptyArray, false);
-            Assert.AreEqual(new int[] { }, EmptyArray);
-
-            Program.Sort(ZeroArray);
-            Assert.AreEqual(new [] {0}, ZeroArray);
-
-            Program.Sort(ZeroArray, false);
-            Assert.AreEqual(new [] {0}, ZeroArray);
-
-            Program.Sort(MultipleArray);
-            Assert.AreEqual(new [] {1, 2, 3}, MultipleArray);
-
-            Program.Sort(MultipleArray, false);
-            Assert.AreEqual(new [] {3, 2, 1}, MultipleArray);
+            Assert.AreEqual(new [] { 1, 2, 3 }, Sort(new[] { 3, 1, 2 }));
+            Assert.AreEqual(new [] { 3, 2, 1 }, Sort(new[] { 3, 1, 2 }, false));
         }
     }
 }
